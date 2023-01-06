@@ -1,4 +1,4 @@
-# project1
+# movieQue
 
 ## User Story
 Given a movie tracker web application.
