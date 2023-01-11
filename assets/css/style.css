@@ -1,0 +1,40 @@
+*{
+    color:white;
+    background-color: var(--color3);
+}
+
+:root {
+    --color1:rgb(136,14,211);
+    --color2:rgb(81,8,126);
+    --color3:black;
+    
+}
+
+.rightSide{
+    /* background-color: var(--color2); */
+    background: var(--color3);
+    background: linear-gradient(90deg, var(--color3) 0%, var(--color2) 50%);
+}
+.leftSide{
+    /* background-color: var(--color2); */
+    background: var(--color2);
+    background: linear-gradient(90deg, var(--color2) 50%, var(--color3) 100%);
+}
+
+.top-space{
+    /* margin-top: 20px; */
+}
+#column1 {
+    height: 300px;
+}
+
+#movieTitle{
+    height: fit-content;
+}
+
+#column2 {
+    height: 100px;
+    background-color: rgb(45, 154, 77);
+    border: black solid 0px;
+    padding: 0px;
+}
