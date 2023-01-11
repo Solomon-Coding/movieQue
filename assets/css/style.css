@@ -7,7 +7,13 @@
     --color1:rgb(136,14,211);
     --color2:rgb(81,8,126);
     --color3:black;
+        --color4:rgb(108,11,170);
+    --color5:rgb(81,8,126);
     
+}
+header {
+    position: fixed;
+    back
 }
 
 .rightSide{
