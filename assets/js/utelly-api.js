@@ -10,22 +10,20 @@ var movieInput = 'Avatar 2009';
 var watchPlatforms=[];
 var whereToWatchMovieEl = document.querySelector('#whereToWatchMovie');
 var utellyURL = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term='+ movieInput +'&country=us';
-fetch(utellyURL, options)
+
+fetch(utellyURL, options) 
 	.then(response => response.json())
-	.then(response => console.log(response))
+	.then(response => test(response))
 	.catch(err => console.error(err));
 
-whereToWatch(response);
+var watchOptions = [];
 
-
-var watchOptions ={
-	
+console.log("This Works")
+function test(response) {
+	console.log(response);
+for (var i=0;i<response.results[1].locations.length;i++){
+	$('#whereToWatchMovie').append($("<a href="+ response.results[1].locations[i].url+" "+"target='_blank' ><img src="+response.results[1].locations[i].icon+"> </a>"));
+	console.log(watchOptions)
 }
 
-function whereToWatch(response){
-    for (var i=0;i<response.results.length;i++){
-		watchPlatforms[i] = response.results[i]
-		watchOptions[i+1]
-	}
 }
-console.log(watchPlatforms)
