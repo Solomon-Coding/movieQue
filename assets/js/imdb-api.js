@@ -13,7 +13,14 @@ const movie = {
 }
 
 // Selectors to grab content from the HTML DOM
-let titleEl = document.querySelector('.title');
+let titleEl = $('#movieTitle');
+let posterEl = $('#moviePoster');
+let descriptionEl = $('#description');
+let ratingsEl = $('#movieRatings');
+let imDbRatingsEl = $(ratingsEl).children().eq(0);
+let metacriticRatingsEl = $(ratingsEl).children().eq(1);
+let watchedListEl = $('#watchedList');
+let unWatchedListEl = $('#unWatchedList');
 
 // Accepts a URL to get data back from and returns data object
 async function checkAPI (url) {
@@ -51,7 +58,11 @@ async function getAPIData(query = '') {
 async function displayAPIData(movieData) {
     console.log(movieData);
 
-    titleEl.innerHTML = movieData.title;
+    $(titleEl).text(movieData.title);
+    $(posterEl).attr('src', movieData.poster);
+    $(descriptionEl).text(movieData.plot);
+    $(imDbRatingsEl).text(movieData.imDbRating);
+    $(metacriticRatingsEl).text(movieData.metacriticRating);
 
 }
 
