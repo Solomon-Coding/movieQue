@@ -1,5 +1,6 @@
 //This file contains code that grabs data from the IMDB API and prints it to the page
-const IMDB_API_KEY = 'k_99xlpepl';
+const IMDB_API_KEY = 'k_99xlpepl';  //Primary API Key
+//const IMDB_API_KEY = 'k_sm3l0qjr';  //Backup API Key
 
 // Stores all relevant movie data
 const movie = {
@@ -21,6 +22,7 @@ let imDbRatingsEl = $(ratingsEl).children().eq(0);
 let metacriticRatingsEl = $(ratingsEl).children().eq(1);
 let watchedListEl = $('#watchedList');
 let unWatchedListEl = $('#unWatchedList');
+let whereToWatchEl = $('#whereToWatchMovie');
 
 // Accepts a URL to get data back from and returns data object
 async function checkAPI (url) {
