@@ -1,3 +1,4 @@
+//This file contains code that grabs data from the IMDB API and prints it to the page
 const IMDB_API_KEY = 'k_99xlpepl';
 
 // Stores all relevant movie data
