@@ -16,13 +16,11 @@ header {
 }
 
 .rightSide{
-    /* background-color: var(--color2); */
     background: var(--color3);
     background: linear-gradient(90deg, var(--color3) 0%, var(--color2) 50%);
 }
 
 .leftSide{
-    /* background-color: var(--color2); */
     background: var(--color2);
     background: linear-gradient(90deg, var(--color2) 50%, var(--color3) 100%);
 }
