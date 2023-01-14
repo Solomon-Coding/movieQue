@@ -1,5 +1,5 @@
 *{
-    color:white;
+    color:var(--color5);
     background-color: var(--color3);
 }
 
@@ -8,13 +8,10 @@
     --color2:rgb(81,8,126);
     --color3:black;
     --color4:rgb(108,11,170);
-    --color5:rgb(81,8,126);
-    
-}
-header {
-    position: fixed;
+    --color5:white;
 }
 
+/* ------------------ALL------------------- */
 .rightSide{
     background: var(--color3);
     background: linear-gradient(90deg, var(--color3) 0%, var(--color2) 50%);
@@ -25,14 +22,69 @@ header {
     background: linear-gradient(90deg, var(--color2) 50%, var(--color3) 100%);
 }
 
-.top-space{
-    padding-top: 20px;
-}
-
 .column{
     padding: 0rem;
 }
 
+/* -----------------index------------------ */
+/* -------------searchResults-------------- */
 #movieTitle{
     height: fit-content;
+    font-weight: bolder;
+}
+
+#moviePoster{
+    
+}
+
+#description{
+    padding-left: 3%;
+    font-weight: normal;
+}
+
+#movieRatings{
+
+}
+
+#watchedList{
+
+}
+
+#unWatchedList{
+
+}
+
+#whereToWatchMovie{
+    padding: 2% 0%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#whereToWatchMovie a{
+    display: flex;
+    align-self: center;
+}
+
+.column1-1{
+    padding-top: 3%;
+}
+
+.column1-2{
+    display: flex;
+    padding-left: 3%;
+    /* padding-top: 3%; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.column1{
+
+}
+
+/* -----------------lists------------------ */
+header{
+    position: fixed;
+}
+
+.top-space{
 }
