@@ -1,24 +1,14 @@
 :root {
-    --color1:rgb(136,14,211);
     --color2:rgb(81,8,126);
     --color3:black;
     --color4:rgb(108,11,170);
-    --color5:rgb(81,8,126);
-    
-}
-
-header {
-    position: fixed;
+    --color5:white;
 }
 
 /* ------------------ALL------------------- */
 .rightSide{
     background: var(--color3);
     background: linear-gradient(90deg, var(--color3) 0%, var(--color2) 50%);
-}
-
-.leftSide{
-    background: var(--color2);
     background: linear-gradient(90deg, var(--color2) 50%, var(--color3) 100%);
 }
 
@@ -26,12 +16,8 @@ header {
     padding: 0rem;
 }
 
-.is-hidden{
-    display: none;
-}
-
 .black-bg{
-    color:white;
+    color:var(--color5);
     background-color: var(--color3);
 }
 
@@ -43,7 +29,7 @@ header {
 }
 
 #moviePoster{
-    
+
 }
 
 #description{
@@ -88,6 +74,10 @@ header {
 
 .column1{
 
+}
+
+.row2,.row3,.row4{
+    padding-left: 3%;
 }
 
 /* -----------------lists------------------ */
