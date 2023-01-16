@@ -11,6 +11,7 @@ header {
     position: fixed;
 }
 
+/* ------------------ALL------------------- */
 .rightSide{
     background: var(--color3);
     background: linear-gradient(90deg, var(--color3) 0%, var(--color2) 50%);
@@ -19,10 +20,6 @@ header {
 .leftSide{
     background: var(--color2);
     background: linear-gradient(90deg, var(--color2) 50%, var(--color3) 100%);
-}
-
-.top-space{
-    padding-top: 20px;
 }
 
 .column{
@@ -38,6 +35,65 @@ header {
     background-color: var(--color3);
 }
 
+/* -----------------index------------------ */
+/* -------------searchResults-------------- */
 #movieTitle{
     height: fit-content;
+    font-weight: bolder;
+}
+
+#moviePoster{
+    
+}
+
+#description{
+    padding-left: 3%;
+    font-weight: normal;
+}
+
+#movieRatings{
+
+}
+
+#watchedList{
+
+}
+
+#unWatchedList{
+
+}
+
+#whereToWatchMovie{
+    padding: 2% 0%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#whereToWatchMovie a{
+    display: flex;
+    align-self: center;
+}
+
+.column1-1{
+    padding-top: 3%;
+}
+
+.column1-2{
+    display: flex;
+    padding-left: 3%;
+    /* padding-top: 3%; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.column1{
+
+}
+
+/* -----------------lists------------------ */
+header{
+    position: fixed;
+}
+
+.top-space{
 }
