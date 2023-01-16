@@ -4,10 +4,11 @@ $(function() {
     var searchInputEl = $('#searchInput');    
     //var searchSubmitEl = $('#searchSubmit');
 
+    /*
     $(searchBar).on('submit', function(){
         var searchQuery = $(searchEl).val();
     });
-
+    */
 
     
 });

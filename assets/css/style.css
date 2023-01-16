@@ -1,14 +1,14 @@
-*{
-    color:var(--color5);
-    background-color: var(--color3);
-}
-
 :root {
     --color1:rgb(136,14,211);
     --color2:rgb(81,8,126);
     --color3:black;
     --color4:rgb(108,11,170);
-    --color5:white;
+    --color5:rgb(81,8,126);
+    
+}
+
+header {
+    position: fixed;
 }
 
 /* ------------------ALL------------------- */
@@ -24,6 +24,15 @@
 
 .column{
     padding: 0rem;
+}
+
+.is-hidden{
+    display: none;
+}
+
+.black-bg{
+    color:white;
+    background-color: var(--color3);
 }
 
 /* -----------------index------------------ */

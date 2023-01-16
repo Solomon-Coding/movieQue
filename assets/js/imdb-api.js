@@ -70,6 +70,6 @@ async function displayAPIData(movieData) {
 
 
 // This function call accepts a search string which then gets data and prints it out to the page
-getAPIData('avatar 2009');
+//getAPIData('avatar 2009');
 
 
