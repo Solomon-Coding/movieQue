@@ -1,8 +1,3 @@
-*{
-    color:white;
-    background-color: var(--color3);
-}
-
 :root {
     --color1:rgb(136,14,211);
     --color2:rgb(81,8,126);
@@ -11,6 +6,7 @@
     --color5:rgb(81,8,126);
     
 }
+
 header {
     position: fixed;
 }
@@ -31,6 +27,15 @@ header {
 
 .column{
     padding: 0rem;
+}
+
+.is-hidden{
+    display: none;
+}
+
+.black-bg{
+    color:white;
+    background-color: var(--color3);
 }
 
 #movieTitle{

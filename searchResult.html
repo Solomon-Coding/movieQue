@@ -7,19 +7,51 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>movieQue</title>
   </head>
-  <body>
+  <body class="black-bg">
     <main>
-      <div class="columns">
-        <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
-        <div class="column is-3 top-space" id="column1">
-          <img id="moviePoster">
+
+      <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="assets/images/movieque-logo-white.png" width="89" height="28">
+          </a>
+      
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-        <div class="column">
-            <div class="top-space"></div>
-              <h2 id="movieTitle">Movie Title</h2>
+      
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">Home</a>      
+            <a class="navbar-item" href="lists.html">Watch Lists</a>           
+            <a class="navbar-item" href="searchResult.html">Search Results</a>           
+          </div>          
+        </div>
+      </nav>
+
+      <!--<div class="container is-black">-->
+
+        <div class="columns">
+          <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
+
+          <div class="column is-3 top-space" id="column1">
+            <figure class="image is-2by3">
+              <img id="moviePoster">
+            </figure>          
+          </div>
+
+          <div class="column">
+            <div class="top-space">            
+            </div>
+            <h2 id="movieTitle">Movie Title</h2>
             <div id="column2">
               <h2>Description:</h2>
-              <p id="description"></p>
+              <p id="description">
+                <progress class="progress is-medium is-dark" max="100"></progress>
+              </p>
             </div>
             <div id="movieRatings">Movie Ratings:</div>
               <div></div>
@@ -28,11 +60,14 @@
               <button id="watchedList">Add to "Watched" list</button>
               <button id="unWatchedList">Add to "Un-watched" list</button>
             </div>
+          </div>
+
+          <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
         </div>
-        <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
-      </div>
-      <div class="columns" >
-        <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
+
+        <div class="columns">
+          <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
+
           <div class="column" id="column1">
             <h2>Trailer:</h2>
             <br>
@@ -44,39 +79,50 @@
             <br>
             <br>
           </div>
-        <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
-      </div>
-      <div class="columns" >
-        <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
+
+          <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
+        </div>
+
+        <div class="columns">
+          <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
+
           <div class="column" id="column1">
             <h2>Where to Find this Movie:</h2>
               <ul id="whereToWatchMovie">
               </ul>
           </div>
-        <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
-      </div>
-      <div class="columns" >
-        <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
-        <div class="column" id="column1">
-          <h2>Major Movie Reviews:</h2>
-          <p></p>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+
+          <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
         </div>
-      <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
-      </div>
+
+        <div class="columns">
+          <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
+
+          <div class="column" id="column1">
+            <h2>Major Movie Reviews:</h2>
+            <p></p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+
+          <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
+        </div>
+
+      <!--</div>-->
+
     </main>
   
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="assets//js/homepage.js"></script>
+  <script src="assets/js/bulma.js"></script>
+  <script src="assets/js/homepage.js"></script>
   <script src="assets/js/imdb-api.js"></script>
-  <script src="assets/js/utelly-api.js"></script>
+  <!--<script src="assets/js/utelly-api.js"></script>-->
 
   </body>
 </html>
