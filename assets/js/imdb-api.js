@@ -1,3 +1,5 @@
+export {getAPIData}
+
 //This file contains code that grabs data from the IMDB API and prints it to the page
 const IMDB_API_KEY = 'k_99xlpepl';  //Primary API Key
 //const IMDB_API_KEY = 'k_sm3l0qjr';  //Backup API Key
@@ -52,8 +54,8 @@ async function getAPIData(query = '') {
     movie.imDbRating = titleData.imDbRating;
     movie.metacriticRating = titleData.metacriticRating;
 
-    //console.log(movie);
-    displayAPIData(movie);    
+    console.log(movie);
+    //displayAPIData(movie);    
 }
 
 // Prints the recieved API data out to the page
@@ -67,7 +69,6 @@ async function displayAPIData(movieData) {
     $(metacriticRatingsEl).text(movieData.metacriticRating);
 
 }
-
 
 // This function call accepts a search string which then gets data and prints it out to the page
 //getAPIData('avatar 2009');
