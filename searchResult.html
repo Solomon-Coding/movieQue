@@ -1,35 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>movieQue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <title>movieQue</title>
   </head>
-  <body>
+  <body class="black-bg">
     <main>
-      <div class="columns top-space">
-        <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
-        <div class="column is-3" id="column1">
-          <img>Movie Poster
+
+      <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="assets/images/movieque-logo-white.png" width="89" height="28">
+          </a>
+          
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-        <div class="column is-gaples">
-            <div class="is-gapless" id="movieTitle">Movie Title</div>
-              <div class="is-gapless" id="column2">
-                <h2>Description</h2>
-                <p></p>
-              </div>
-            <div class="is-gapless" id="column2">Add to list
+      
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">Home</a>      
+            <a class="navbar-item" href="lists.html">Watch Lists</a>           
+            <a class="navbar-item" href="searchResult.html">Search Results</a>           
+          </div>          
+        </div>
+      </nav>
+
+      <!--<div class="container is-black">-->
+
+        <div class="columns">
+          <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
+
+          <div class="column is-3 top-space column1-1">
+            <figure class="image is-2by3">
+              <img id="moviePoster">
+            </figure>          
+          </div>
+
+          <div class="column column1-2">
+
+            <div class="top-space"></div>
+            <h2 id="movieTitle">Movie Title</h2>
+            <div>
+              <h1>Description:</h1>
+              <p id="description">
+                <!-- <progress class="progress is-medium is-dark" max="100"></progress> -->
+              </p>
+            </div>
+
+            <div id="movieRatings">Movie Ratings:</div>
+              <div></div>
+              <div></div>
+
+            <div>Add to list
               <button id="watchedList">Add to "Watched" list</button>
               <button id="unWatchedList">Add to "Un-watched" list</button>
             </div>
+
+          </div>
+
+          <div class="column is-2-desktop is-1-mobile is-1-tablet rightSide"></div>
         </div>
-        <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
-      </div>
-      <div class="columns" >
-        <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
-          <div class="column" id="column1">
+
+        <div class="columns">
+          <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
+
+          <div class="column row2">
             <h2>Trailer:</h2>
             <br>
             <br>
@@ -40,12 +82,28 @@
             <br>
             <br>
           </div>
-        <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
-      </div>
-      <div class="columns" >
-        <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
-          <div class="column" id="column1">
+
+          <div class="column is-2-desktop is-1-mobile is-1-tablet rightSide"></div>
+        </div>
+
+        <div class="columns">
+          <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
+
+          <div class="column row3">
             <h2>Where to Find this Movie:</h2>
+              <div id="whereToWatchMovie">
+              </div>
+          </div>
+
+          <div class="column is-2-desktop is-1-mobile is-1-tablet rightSide"></div>
+        </div>
+
+        <div class="columns">
+          <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
+
+          <div class="column row4">
+            <h2>Major Movie Reviews:</h2>
+            <p></p>
             <br>
             <br>
             <br>
@@ -55,25 +113,19 @@
             <br>
             <br>
           </div>
-        <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
-      </div>
-      <div class="columns" >
-        <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
-        <div class="column" id="column1">
-          <h2>Major Movie Reviews:</h2>
-          <p></p>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+
+          <div class="column is-2-desktop is-1-mobile is-1-tablet rightSide"></div>
         </div>
-      <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
-      </div>
+
+      <!--</div>-->
+
     </main>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/bulma.js"></script>
+  <script type="module" src="assets/js/homepage.js"></script>
+  <!--<script src="assets/js/imdb-api.js"></script>-->
+  <script src="assets/js/utelly-api.js"></script>
 
   </body>
 </html>

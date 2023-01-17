@@ -2,63 +2,99 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>movieQue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>movieQue</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
     <main>
-        <header>
-          <ul>
-            <li><a href="https://www.w3schools.com">To Watch</a></li>
-            <li><a href="https://www.w3schools.com">Have Watched</a></li>
-          </ul>
-        </header>
-        <section class="section">
-          <h2> Watched Movies</h2>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Movie Name</th>
-                <th>Reviews</th>
-                <th>Add to "other" list</th>
-                <th> Remove Entry</th>
-              </tr>
-            </thead>
 
-            <tbody>
-              <tr>
-                <td>38</td>
-                <td>23</td>
-                <td><button>X</button></td>
-                <td><button>X</button></td>
-              </tr>
-            </tbody>
-          </table>
-          </section>
+      <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="assets/images/movieque-logo-white.png" width="89" height="28">
+          </a>
+      
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">Home</a>      
+            <a class="navbar-item" href="lists.html">Watch Lists</a>           
+            <a class="navbar-item" href="searchResult.html">Search Results</a>           
+          </div>          
+        </div>
+      </nav>
 
-          <section class="section">
-            <h2>Movies to Watch</h2>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Movie Name</th>
-                  <th>Reviews</th>
-                  <th>Add to "other" list</th>
-                  <th> Remove Entry</th>
-                </tr>
-              </thead>
-  
-              <tbody>
-                <tr>
-                  <td>38</td>
-                  <td>23</td>
-                  <td><button>X</button></td>
-                  <td><button>X</button></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-        </main>
+      <header>
+        <ul>
+          <li><a href="">To Watch</a></li>
+          <li><a href="">Have Watched</a></li>
+        </ul>
+      </header>
+
+      <section class="section">
+        <h2> Watched Movies</h2>
+        <table class="table">
+          <thead>
+            <tr >
+              <th>Movie Name</th>
+              <th>Reviews</th>
+              <th>Add to "other" list</th>
+              <th> Remove Entry</th>
+            </tr>
+          </thead>
+
+          <tbody id="watchedTable">
+            <!-- <tr>
+              <td>38</td>
+              <td>23</td>
+              <td><button>X</button></td>
+              <td><button>X</button></td>
+            </tr> -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Movies to Watch</h2>
+        <table class="table" >
+          <thead>
+            <tr id="unWatchedTable">
+              <th>Movie Name</th>
+              <th>Reviews</th>
+              <th>Add to "other" list</th>
+              <th> Remove Entry</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>38</td>
+              <td>23</td>
+              <td><button>X</button></td>
+              <td><button>X</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/bulma.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="assets//js/homepage.js"></script>
+      <!-- <script src="assets/js/imdb-api.js"></script> -->
+      <!-- <script src="assets/js/utelly-api.js"></script> -->
+      <script src="assets/js/listsFunc.js"></script>
   </body>
 </html>

@@ -1,46 +1,118 @@
 *{
-    color:white;
-    background-color: var(--color3);
+    background-color: black;
+    color: white;
 }
 
 :root {
-    --color1:rgb(136,14,211);
+    --color1:rgb(108,11,170);
     --color2:rgb(81,8,126);
     --color3:black;
-        --color4:rgb(108,11,170);
-    --color5:rgb(81,8,126);
-    
-}
-header {
-    position: fixed;
-    back
+    --color5:white;
 }
 
+/* ------------------ALL------------------- */
 .rightSide{
-    /* background-color: var(--color2); */
     background: var(--color3);
     background: linear-gradient(90deg, var(--color3) 0%, var(--color2) 50%);
 }
+
 .leftSide{
-    /* background-color: var(--color2); */
-    background: var(--color2);
+    background: var(--color3);
     background: linear-gradient(90deg, var(--color2) 50%, var(--color3) 100%);
 }
 
-.top-space{
-    /* margin-top: 20px; */
-}
-#column1 {
-    height: 300px;
+.column{
+    padding: 0rem;
 }
 
+.black-bg{
+    color:var(--color5);
+    background-color: var(--color3);
+}
+
+/* .navbar{
+    position: fixed;
+} */
+
+/* -----------------index------------------ */
+/* -------------searchResults-------------- */
 #movieTitle{
     height: fit-content;
+    font-weight: bolder;
 }
 
-#column2 {
-    height: 100px;
-    background-color: rgb(45, 154, 77);
-    border: black solid 0px;
-    padding: 0px;
+/* #moviePoster{
+    
+} */
+#moviePoster{
+
 }
+
+#description{
+    padding-left: 3%;
+    font-weight: normal;
+}
+
+/* #movieRatings{
+
+} */
+
+#watchedList{
+    background-color: var(--color2);
+    color: var(--color5);
+}
+
+#watchedList:hover{
+    background-color: var(--color1);
+    cursor: pointer;
+}
+
+#unWatchedList{
+    background-color: var(--color2);
+    color: var(--color5);
+}
+
+#unWatchedList:hover{
+    background-color: var(--color1);
+    cursor: pointer;
+}
+
+#whereToWatchMovie{
+    padding: 2% 0%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#whereToWatchMovie a{
+    display: flex;
+    align-self: center;
+}
+
+.column1-1{
+    padding-top: 3%;
+}
+
+.column1-2{
+    display: flex;
+    padding-left: 3%;
+    /* padding-top: 3%; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.column1{
+
+}
+
+.row2,.row3,.row4{
+    padding-left: 3%;
+}
+
+/* -----------------lists------------------ */
+header{
+    position: fixed;
+}
+
+/* .top-space{
+
+} */
