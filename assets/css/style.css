@@ -30,15 +30,35 @@
     background-color: var(--color3);
 }
 
-/* .navbar{
-    position: fixed;
-} */
 
 /* -----------------index------------------ */
 
 .fullHeight{
     height:100vh;
 }
+
+#searchInput a{
+    background-color: var(--color2);
+}
+
+#searchInput a:hover{
+    background-color: var(--color1);
+}
+
+#search{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#search h1{
+    display: flex;
+    justify-content: center;
+}
+
+
 /* -------------searchResults-------------- */
 #movieTitle{
     height: fit-content;
