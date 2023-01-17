@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>movieQue</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
     <main>
@@ -43,7 +44,7 @@
         <h2> Watched Movies</h2>
         <table class="table">
           <thead>
-            <tr>
+            <tr >
               <th>Movie Name</th>
               <th>Reviews</th>
               <th>Add to "other" list</th>
@@ -51,22 +52,22 @@
             </tr>
           </thead>
 
-          <tbody>
-            <tr>
+          <tbody id="watchedTable">
+            <!-- <tr>
               <td>38</td>
               <td>23</td>
               <td><button>X</button></td>
               <td><button>X</button></td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </section>
 
       <section class="section">
         <h2>Movies to Watch</h2>
-        <table class="table">
+        <table class="table" >
           <thead>
-            <tr>
+            <tr id="unWatchedTable">
               <th>Movie Name</th>
               <th>Reviews</th>
               <th>Add to "other" list</th>
@@ -90,5 +91,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/bulma.js"></script>
 
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="assets//js/homepage.js"></script>
+      <!-- <script src="assets/js/imdb-api.js"></script> -->
+      <!-- <script src="assets/js/utelly-api.js"></script> -->
+      <script src="assets/js/listsFunc.js"></script>
   </body>
 </html>

@@ -1,7 +1,12 @@
+*{
+    background-color: black;
+    color: white;
+}
+
 :root {
+    --color1:rgb(108,11,170);
     --color2:rgb(81,8,126);
     --color3:black;
-    --color4:rgb(108,11,170);
     --color5:white;
 }
 
@@ -25,6 +30,10 @@
     background-color: var(--color3);
 }
 
+/* .navbar{
+    position: fixed;
+} */
+
 /* -----------------index------------------ */
 /* -------------searchResults-------------- */
 #movieTitle{
@@ -32,6 +41,9 @@
     font-weight: bolder;
 }
 
+/* #moviePoster{
+    
+} */
 #moviePoster{
 
 }
@@ -41,16 +53,28 @@
     font-weight: normal;
 }
 
-#movieRatings{
+/* #movieRatings{
 
-}
+} */
 
 #watchedList{
+    background-color: var(--color2);
+    color: var(--color5);
+}
 
+#watchedList:hover{
+    background-color: var(--color1);
+    cursor: pointer;
 }
 
 #unWatchedList{
+    background-color: var(--color2);
+    color: var(--color5);
+}
 
+#unWatchedList:hover{
+    background-color: var(--color1);
+    cursor: pointer;
 }
 
 #whereToWatchMovie{
@@ -89,5 +113,6 @@ header{
     position: fixed;
 }
 
-.top-space{
-}
+/* .top-space{
+
+} */

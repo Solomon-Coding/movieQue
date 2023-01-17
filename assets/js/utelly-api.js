@@ -6,7 +6,7 @@ const options = {
 		'X-RapidAPI-Host': 'utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com'
 	}
 };
-var API = "off"
+var API = "on"
 var movieInput = 'Avatar 2009';
 var watchPlatforms=[];
 var whereToWatchMovieEl = document.querySelector('#whereToWatchMovie');
@@ -14,7 +14,7 @@ var utellyURL = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.c
 
 
 // method for calling stored API data or live API data
-if (API === 'on') {
+if (API === 'off') {
 // Live API method
 fetch(utellyURL, options) 
 	.then(response => response.json())
