@@ -7,37 +7,38 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>movieQue - Search</title>
   </head>
-  <body class="black-bg">
+  <body class="black-bg">    
+
+    <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img src="assets/images/movieque-logo-white.png" width="89" height="28">
+        </a>
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">Home</a>      
+          <a class="navbar-item" href="lists.html">Watch Lists</a>           
+          <a class="navbar-item" href="searchResult.html">Search Results</a>           
+        </div>          
+      </div>
+    </nav>
+
     <main>
 
-      <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="index.html">
-            <img src="assets/images/movieque-logo-white.png" width="89" height="28">
-          </a>
-          
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="index.html">Home</a>      
-            <a class="navbar-item" href="lists.html">Watch Lists</a>           
-            <a class="navbar-item" href="searchResult.html">Search Results</a>           
-          </div>          
-        </div>
-      </nav>
-
-      <!--<div class="container is-black">-->
+      <!-- <div class="container is-black"> -->
 
         <div class="columns">
           <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
 
-          <div class="column is-3 top-space column1-1">
+          <div class="column is-3 column1-1">
             <figure class="image is-2by3">
               <img id="moviePoster">
             </figure>          
@@ -115,15 +116,15 @@
           <div class="column is-2-desktop is-1-mobile is-1-tablet rightSide"></div>
         </div>
 
-      <!--</div>-->
+      <!-- </div> -->
 
     </main>
   
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="assets/js/bulma.js"></script>
-  <script type="module" src="assets/js/homepage.js"></script>
-  <!--<script src="assets/js/imdb-api.js"></script>-->
-  <script src="assets/js/utelly-api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/bulma.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    <!--<script src="assets/js/imdb-api.js"></script>-->
+    <script src="assets/js/utelly-api.js"></script>
 
   </body>
 </html>

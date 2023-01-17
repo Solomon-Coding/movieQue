@@ -6,7 +6,7 @@ const options = {
 		'X-RapidAPI-Host': 'utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com'
 	}
 };
-var API = "on"
+var API = "off"
 var movieInput = 'Avatar 2009';
 var watchPlatforms=[];
 var whereToWatchMovieEl = document.querySelector('#whereToWatchMovie');
