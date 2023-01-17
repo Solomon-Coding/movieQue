@@ -1,28 +1,27 @@
 import { getAPIData } from "./get-api.js";
 import { displayAPIData } from "./print-api.js";
+import { readFromStorage, saveToStorage } from "./localStorage.js";
 
 // This will contain the code that grabs the user input from the search bar
 $(function() {
-    var searchFormEl = $('#searchForm');
     var searchInputEl = $('#searchInput');
+    var searchBtnEl = $('#searchBtn');
     var userSearch = '';
-    var imDbID = '';
+    //var imDbID = '';
 
-
-    searchInputEl.on("click",function(){
-        userSearch = searchFormEl.val();
+    searchBtnEl.on("click",function(){
+        userSearch = searchInputEl.val();
         console.log("User input: "+userSearch);
+
+        $('body').load('./searchResult.html');       
 
         let imDbSearch = new Promise(function(resolve, reject) {
             resolve(getAPIData('imdb-search',userSearch))
         });        
         
-        imDbSearch
-        .then(
-            function(value) {
-                console.log(value)
-                imDbID = value.imDbID;
-                console.log("After promise: "+imDbID);
+        imDbSearch.then(
+            function(imDbID) {
+                console.log(imDbID);                
                 
                 let imDbTitle = new Promise(function(resolve, reject) {
                     resolve(getAPIData('imdb-title',imDbID))
@@ -32,8 +31,15 @@ $(function() {
                     resolve(getAPIData('utelly',imDbID))
                 });
 
-                imDbTitle.then(function(value2) {console.log(value2)} );
-                utellyLookup.then(function(value3) {console.log(value3)} );
+                imDbTitle.then(imdb => {
+                    console.log(imdb);
+
+                    utellyLookup.then(utelly => {
+                        console.log(utelly)
+
+                        displayAPIData(imdb,utelly);
+                    });           
+                });               
             }
         );
         
