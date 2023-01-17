@@ -14,7 +14,7 @@ async function defineSelectors(){
 }
 
 // Prints the recieved API data out to the page
-async function displayAPIData(imdbData,utellyData) {
+function displayAPIData(imdbData,utellyData) {
     //defineSelectors();
     console.log("Print func");
     console.log(imdbData);
