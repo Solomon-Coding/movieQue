@@ -8,82 +8,82 @@
     <title>movieQue - Lists</title>
   </head>
   <body>
+    <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img src="assets/images/movieque-logo-white.png" width="89" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">Home</a>      
+          <a class="navbar-item" href="lists.html">Watch Lists</a>           
+          <a class="navbar-item" href="searchResult.html">Search Results</a>           
+        </div>          
+      </div>
+    </nav>
     <main>
 
-      <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="index.html">
-            <img src="assets/images/movieque-logo-white.png" width="89" height="28">
-          </a>
-      
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+      <div class="columns">
+        <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
+
+        <div class="column">
+          <section class="section">
+            <h2> Watched Movies</h2>
+            <table class="table">
+              <thead>
+                <tr >
+                  <th>Movie Name</th>
+                  <th>Reviews</th>
+                  <th>Add to "other" list</th>
+                  <th> Remove Entry</th>
+                </tr>
+              </thead>
+    
+              <tbody id="watchedTable">
+                <!-- <tr>
+                  <td>38</td>
+                  <td>23</td>
+                  <td><button>X</button></td>
+                  <td><button>X</button></td>
+                </tr> -->
+              </tbody>
+            </table>
+          </section>
+    
+          <section class="section">
+            <h2>Movies to Watch</h2>
+            <table class="table" >
+              <thead>
+                <tr id="unWatchedTable">
+                  <th>Movie Name</th>
+                  <th>Reviews</th>
+                  <th>Add to "other" list</th>
+                  <th> Remove Entry</th>
+                </tr>
+              </thead>
+    
+              <tbody>
+                <tr>
+                  <td>38</td>
+                  <td>23</td>
+                  <td><button>X</button></td>
+                  <td><button>X</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
         </div>
-      
-        <div class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="index.html">Home</a>      
-            <a class="navbar-item" href="lists.html">Watch Lists</a>           
-            <a class="navbar-item" href="searchResult.html">Search Results</a>           
-          </div>          
-        </div>
-      </nav>
 
-      <header>
-        <ul>
-          <li><a href="">To Watch</a></li>
-          <li><a href="">Have Watched</a></li>
-        </ul>
-      </header>
-
-      <section class="section">
-        <h2> Watched Movies</h2>
-        <table class="table">
-          <thead>
-            <tr >
-              <th>Movie Name</th>
-              <th>Reviews</th>
-              <th>Add to "other" list</th>
-              <th> Remove Entry</th>
-            </tr>
-          </thead>
-
-          <tbody id="watchedTable">
-            <!-- <tr>
-              <td>38</td>
-              <td>23</td>
-              <td><button>X</button></td>
-              <td><button>X</button></td>
-            </tr> -->
-          </tbody>
-        </table>
-      </section>
-
-      <section class="section">
-        <h2>Movies to Watch</h2>
-        <table class="table" >
-          <thead>
-            <tr id="unWatchedTable">
-              <th>Movie Name</th>
-              <th>Reviews</th>
-              <th>Add to "other" list</th>
-              <th> Remove Entry</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>38</td>
-              <td>23</td>
-              <td><button>X</button></td>
-              <td><button>X</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+        <div class="column is-2-desktop is-1-mobile is-1-tablet rightSide"></div>
+      </div>
 
     </main>
 

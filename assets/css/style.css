@@ -51,13 +51,19 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     flex-direction: column;
+    padding-bottom: 6%;
 }
 
 #search h1{
     display: flex;
     justify-content: center;
+    color: var(--color5);
 }
 
+#test{
+    position: fixed;
+    width: 100vw;
+}
 
 /* -------------searchResults-------------- */
 #movieTitle{
@@ -65,9 +71,6 @@
     font-weight: bolder;
 }
 
-/* #moviePoster{
-    
-} */
 #moviePoster{
 
 }
@@ -118,8 +121,8 @@
 
 .column1-2{
     display: flex;
+    padding-top: 3%;
     padding-left: 3%;
-    /* padding-top: 3%; */
     flex-direction: column;
     justify-content: space-between;
 }

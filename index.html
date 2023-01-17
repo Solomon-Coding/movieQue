@@ -8,38 +8,37 @@
     <title>movieQue - Home</title>
   </head>
   <body>
-    <main >
 
-      <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="index.html">
-            <img src="assets/images/movieque-logo-white.png" width="89" height="28">
-          </a>
+    <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img src="assets/images/movieque-logo-white.png" width="89" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
       
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        
-        <div class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="index.html">Home</a>      
-            <a class="navbar-item" href="lists.html">Watch Lists</a>           
-            <a class="navbar-item" href="searchResult.html">Search Results</a>           
-          </div>          
-        </div>
-      </nav>
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">Home</a>      
+          <a class="navbar-item" href="lists.html">Watch Lists</a>           
+          <a class="navbar-item" href="searchResult.html">Search Results</a>           
+        </div>          
+      </div>
+    </nav>
 
-      <div class="columns fullHeight" >
+    <main id="test">
+      <div class="columns">
         <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
 
-        <div class="column" id="search">  
+        <div class="column fullHeight" id="search">  
           <div>
-            <h1>Welcome to MovieQue!</h1>  
+            <h1 class="title is-2" >Welcome to movieQue!</h1>  
           </div>
-          
           <div class="field has-addons" style="justify-content:center">
             <div class="control">
               <input class="input" id="searchForm" type="text" placeholder="Lookup a Movie!">
