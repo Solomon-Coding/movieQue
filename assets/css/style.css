@@ -35,6 +35,10 @@
 } */
 
 /* -----------------index------------------ */
+
+.fullHeight{
+    height:100vh;
+}
 /* -------------searchResults-------------- */
 #movieTitle{
     height: fit-content;
