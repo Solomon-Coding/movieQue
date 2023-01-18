@@ -18,11 +18,6 @@ const movie = {
     metacriticRating: "",
 }
 
-var watchLocation = {
-    url: "",
-    icon: "",
-};
-
 function readFromStorage(key) {
     var data = localStorage.getItem(key);
     if (data) { data = JSON.parse(data) }
@@ -49,8 +44,7 @@ async function getAPIData(mode = '',query = ''){
     let url = '';
     let APIData = '';
     let options = {};
-    let utellyData = [];
-    let API = false;
+    let API = true;
 
     switch(mode){
         case 'imdb-search':
@@ -92,19 +86,6 @@ async function getAPIData(mode = '',query = ''){
                 saveToStorage('utelly',APIData);
             }
             else{ APIData = readFromStorage('utelly') }
-
-            /* console.log("Streaming locations (raw): ");
-            console.log(APIData);
-
-            for(var x in APIData.collection.locations){
-                watchLocation.url = APIData.collection.locations[x].url;
-                watchLocation.icon = APIData.collection.locations[x].icon;
-
-                utellyData.push(watchLocation);
-            }
-
-            console.log("Streaming locations: ");
-            console.log(utellyData); */
 
             return APIData;
     }
