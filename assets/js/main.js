@@ -50,7 +50,7 @@ $(function() {
                         setTimeout(() => {
                             // Displays data returned from imdb and utelly
                             displayAPIData(imdb,utelly);
-                        }, 5000);
+                        }, 4000);
 
                         // For use when API is turned on
                         //displayAPIData(imdb,utelly);

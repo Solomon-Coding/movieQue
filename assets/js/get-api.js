@@ -18,7 +18,7 @@ const movie = {
     metacriticRating: "",
 }
 
-const watchLocation = {
+var watchLocation = {
     url: "",
     icon: "",
 };
@@ -93,6 +93,9 @@ async function getAPIData(mode = '',query = ''){
             }
             else{ APIData = readFromStorage('utelly') }
 
+            /* console.log("Streaming locations (raw): ");
+            console.log(APIData);
+
             for(var x in APIData.collection.locations){
                 watchLocation.url = APIData.collection.locations[x].url;
                 watchLocation.icon = APIData.collection.locations[x].icon;
@@ -100,6 +103,9 @@ async function getAPIData(mode = '',query = ''){
                 utellyData.push(watchLocation);
             }
 
-            return utellyData;
+            console.log("Streaming locations: ");
+            console.log(utellyData); */
+
+            return APIData;
     }
 }

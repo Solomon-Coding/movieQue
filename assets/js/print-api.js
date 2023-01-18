@@ -27,8 +27,8 @@ function displayAPIData(imdbData,utellyData) {
     $('#movieRatings').children().eq(1).text(imdbData.metacriticRating);
     
 
-    for(var x in utellyData){
-        $('#whereToWatchMovie').append("<a href=" + utellyData[x].url + " target='_blank'><img src=" + utellyData[x].icon + "></a>");
+    for(var x in utellyData.collection.locations){
+        $('#whereToWatchMovie').append("<a href=" + utellyData.collection.locations[x].url + " target='_blank'><img src=" + utellyData.collection.locations[x].icon + "></a>");
     }
 
 
