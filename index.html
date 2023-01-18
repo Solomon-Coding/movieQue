@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>movieQue - Home</title>
   </head>
-  <body>
+  <body class="black-bg fullHeight">
 
     <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -32,14 +32,14 @@
       </div>
     </nav>
 
-    <main id="test">
+    <main id="test" class="fullHeight">
 
-      <div class="columns fullHeight">
-        <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
+      <div class="columns is-mobile fullHeight">
+        <div class="column is-2-desktop is-0-mobile is-1-tablet leftSide"></div>
 
         <div class="column" id="search">  
           <div>
-            <h1 class="title is-2" >Welcome to movieQue!</h1>  
+            <h1 class="title is-2">Welcome to movieQue!</h1>  
           </div>
           <div class="field has-addons" style="justify-content:center">
             <div class="control">
@@ -49,15 +49,12 @@
               <a class="button is-info">Search</a>
             </div>
           </div> 
-          <div>
+          <div id="subtitle">
             <p>To start, enter the name of a movie you wish to look up.</p>
-            <button class="js-modal-trigger" data-target="modal-js-example">
-              Open JS example modal
-            </button>
           </div>
         </div>
 
-        <div class="column is-2-desktop is-1-mobile is-1-tablet rightSide"></div>
+        <div class="column is-2-desktop is-0-mobile is-1-tablet rightSide"></div>
       </div>
 
     </main>
@@ -66,7 +63,7 @@
       
     </footer>
 
-    <div id="modal-js-example" class="modal">
+    <div id="modal-error" class="modal">
       <div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
