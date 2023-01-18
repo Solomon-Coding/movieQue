@@ -41,7 +41,6 @@ $(function() {
                 // Calls the promise to get data back from imdb
                 imDbTitle.then(imdb => {
                     console.log(imdb);
-
                     // Nested promise that excecutes after data has been returned from imdb
                     utellyLookup.then(utelly => {
                         console.log(utelly)
