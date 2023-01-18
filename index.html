@@ -45,13 +45,14 @@
               <input class="input" id="searchInput" type="text" placeholder="Lookup a Movie!">
             </div>
             <div class="control" id="searchBtn">
-              <a class="button is-info">
-                Search
-              </a>
+              <a class="button is-info">Search</a>
             </div>
           </div> 
           <div>
             <p>To start, enter the name of a movie you wish to look up.</p>
+            <button class="js-modal-trigger" data-target="modal-js-example">
+              Open JS example modal
+            </button>
           </div>
         </div>
 
@@ -59,8 +60,27 @@
       </div>
 
     </main>
+
     <footer id="indexFooter">
+      
     </footer>
+
+    <div id="modal-js-example" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Error</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <p>You haven't entered anything</p>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">OK</button>          
+        </footer>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/bulma.js"></script>
