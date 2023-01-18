@@ -69,6 +69,14 @@ body,main{
     color: var(--color5);
 }
 
+#searchBtn a{
+    background-color: var(--color2);
+}
+
+#searchBtn a:hover{
+    background-color: var(--color1);
+}
+
 #test{
     position: fixed;
     width: 100vw;
