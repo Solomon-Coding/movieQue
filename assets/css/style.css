@@ -8,11 +8,13 @@
 /* ------------------ALL------------------- */
 html{
     height: 100vh;
+    background-color: var(--color3);
 }
 
-/* body,main{
+body{
     height: 100%;
-} */
+    color: var(--color5);
+}
 
 .rightSide{
     background: var(--color3);
@@ -28,18 +30,20 @@ html{
     padding: 0rem;
 }
 
-.black-bg{
-    background-color: var(--color3);
-    color: var(--color5);    
-}
-
 .fullHeight{
-    height:100%;
+    height:102%;
 }
 
+.overflow {
+    overflow-y: clip;
+}
 
 /* -----------------index------------------ */
-
+#searchBar{
+    justify-content: center;
+    width: 360px;
+    margin: 0 auto;
+}
 
 #searchInput a{
     background-color: var(--color2);
@@ -72,6 +76,10 @@ html{
     background-color: var(--color1);
 }
 
+#subtitle p{
+    text-align: center;
+}
+
 #test{
     position: fixed;
     width: 100vw;
@@ -92,7 +100,10 @@ html{
 
 #loadingPage{ /* HERE!!!!!! */
     display: contents;
-    height: 100vh;
+}
+
+#loadingPage, #pageHeight{
+    /* height: 102%; */
 }
 
 #progressBar{
@@ -100,15 +111,16 @@ html{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 #progressBar progress{
     width: 40%;
 }
 
-#pageHeight{
-    height:100vh;
-}
+/* #pageHeight{
+    
+} */
 
 #movieTitle{
     height: fit-content;
@@ -185,11 +197,13 @@ header{
     position: fixed;
 }
 
+.table {
+    width: 100%;
+}
+
 /* .top-space{
 
 } */
-
-
 
 /* -----------------media queries------------------ */
 
@@ -198,6 +212,20 @@ header{
     #search h1, #subtitle p{
         max-width: 250px;
         margin: auto;
+    }
+
+    #progressBar progress{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    #progressBar p{
+        width: 60%;
+        margin: auto;
+        text-align: center;
     }
 
 }
