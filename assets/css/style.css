@@ -84,11 +84,11 @@ body,main{
 
 /* -------------searchResults-------------- */
 #mainPage{ /* HERE!!!!!! */
-    display: contents;
+    display: none;
 }
 
 #loadingPage{ /* HERE!!!!!! */
-    display: none;
+    display: contents;
     height: 100vh;
 }
 

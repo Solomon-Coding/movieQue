@@ -17,7 +17,6 @@ $(function() {
 
         // Replaces the body of index.html with the body from searchResult.html
         $('body').load('./searchResult.html');       
-
         // Set up a promise to get the imdb ID in order to get other data
         let imDbSearch = new Promise(function(resolve, reject) {
             resolve(getAPIData('imdb-search',userSearch))
@@ -47,8 +46,13 @@ $(function() {
 
                         // For use when API is turned off
                         setTimeout(() => {
+
                             // Displays data returned from imdb and utelly
                             displayAPIData(imdb,utelly);
+
+                            // Changes from the loading screen
+                            document.getElementById("mainPage").style.display = "contents";
+                            document.getElementById("loadingPage").style.display = "none";
                         }, 4000);
 
                         // For use when API is turned on
