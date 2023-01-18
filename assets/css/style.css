@@ -1,6 +1,6 @@
 *{
-    background-color: black;
-    color: white;
+    background-color: var(--color3);
+    color: var(--color5);
 }
 
 :root {
@@ -83,6 +83,30 @@ body,main{
 }
 
 /* -------------searchResults-------------- */
+#mainPage{ /* HERE!!!!!! */
+    display: none;
+}
+
+#loadingPage{ /* HERE!!!!!! */
+    display: contents;
+    height: 100vh;
+}
+
+#progressBar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#progressBar progress{
+    width: 40%;
+}
+
+#pageHeight{
+    height:100vh;
+}
+
 #movieTitle{
     height: fit-content;
     font-weight: bolder;
