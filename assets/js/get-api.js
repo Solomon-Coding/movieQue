@@ -44,7 +44,7 @@ async function getAPIData(mode = '',query = ''){
     let url = '';
     let APIData = '';
     let options = {};
-    let API = false;
+    let API = true;
 
     switch(mode){
         case 'imdb-search':
