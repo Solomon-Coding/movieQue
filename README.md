@@ -25,6 +25,10 @@ Through the course of this project, we learned more about the methods used to ge
 
 <br>
 
+## Link
+
+This is a link to the project hosted on GitHub Pages: [https://solomon-coding.github.io/movieQue/](https://solomon-coding.github.io/movieQue/)
+
 ## Usage
 
 <!-- Provide instructions and examples for use. Include screenshots as needed. -->
