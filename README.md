@@ -2,7 +2,7 @@
 
 ## Description
 
-We created movieQue because we wanted to create a professional-looking web application to aid the needs of moviegoers.
+We created movieQue because we wanted to make a professional-looking web application to aid the needs of moviegoers.
 
 We wanted to create an application that would allow users to look up movies, find information about them and where to watch them on streaming services, and additionally make lists of the many movies that they would like to watch, and have already watched. These lists are persistent on movieQue, so users can come back and add to or delete from those lists whenever they want. 
 
