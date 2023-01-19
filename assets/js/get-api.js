@@ -16,6 +16,7 @@ const movie = {
     plot: "",
     imDbRating: "",
     metacriticRating: "",
+    youtubeId: "",
 }
 
 function readFromStorage(key) {
@@ -44,7 +45,7 @@ async function getAPIData(mode = '',query = ''){
     let url = '';
     let APIData = '';
     let options = {};
-    let API = true;
+    let API = false;
 
     switch(mode){
         case 'imdb-search':
@@ -71,7 +72,7 @@ async function getAPIData(mode = '',query = ''){
             movie.imDbRating = APIData.imDbRating;
             movie.metacriticRating = APIData.metacriticRating;
 
-            return movie;
+            return movie;        
         case 'utelly':
             url = utellyBaseUrl + query + '&source=imdb&country=us';
             options = {
@@ -88,5 +89,16 @@ async function getAPIData(mode = '',query = ''){
             else{ APIData = readFromStorage('utelly') }
 
             return APIData;
+        case 'imdb-youtube-trailer':
+            url = imdbBaseUrl + 'YouTubeTrailer/' + IMDB_API_KEY + '/' + query;
+            if(API){
+                APIData = await checkAPI(url,options);
+                saveToStorage('imdb-youtube-trailer',APIData);
+            }
+            else{ APIData = readFromStorage('imdb-youtube-trailer') }
+
+            movie.youtubeId = APIData.videoId;
+
+            return movie.youtubeId;
     }
 }

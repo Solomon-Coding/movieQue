@@ -1,4 +1,4 @@
-import { getAPIData, readFromStorage, saveToStorage } from "./get-api.js";
+import { getAPIData } from "./get-api.js";
 import { displayAPIData } from "./print-api.js";
 
 // This will contain the code that grabs the user input from the search bar
@@ -50,28 +50,36 @@ $(function() {
                     resolve(getAPIData('utelly',imDbID))
                 });
 
+                let imDbYoutube = new Promise(function(resolve, reject) {
+                    resolve(getAPIData('imdb-youtube-trailer',imDbID))
+                });
+
                 // Calls the promise to get data back from imdb
                 imDbTitle.then(imdb => {
-                    console.log(imdb);
-                    // Nested promise that excecutes after data has been returned from imdb
-                    utellyLookup.then(utelly => {
-                        console.log(utelly)
+                    //console.log(imdb);
+                    imDbYoutube.then(youtubeId => {
+                        //console.log(youtubeId);  
 
-                        // For use when API is turned off
-                        setTimeout(() => {
+                        // Nested promise that excecutes after data has been returned from imdb
+                        utellyLookup.then(utelly => {
+                            console.log(utelly)
 
-                            // Displays data returned from imdb and utelly
-                            displayAPIData(imdb,utelly);
+                            // For use when API is turned off
+                            setTimeout(() => {
 
-                            // Changes from the loading screen
-                            document.getElementById("mainPage").style.display = "contents";
-                            document.getElementById("loadingPage").style.display = "none";
-                            $('html').css('overflow-y','scroll');
-                        }, 4000);
+                                // Displays data returned from imdb and utelly
+                                displayAPIData(imdb,utelly);                                
 
-                        // For use when API is turned on
-                        //displayAPIData(imdb,utelly);
-                    });           
+                                // Changes from the loading screen
+                                document.getElementById("mainPage").style.display = "contents";
+                                document.getElementById("loadingPage").style.display = "none";
+                                $('html').css('overflow-y','scroll');
+                            }, 4000);
+
+                            // For use when API is turned on
+                            //displayAPIData(imdb,utelly);
+                        });
+                    });            
                 });               
             } //end then func
         ); //end then

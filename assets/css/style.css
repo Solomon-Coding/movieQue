@@ -106,10 +106,6 @@ body{
     display: contents;
 }
 
-#loadingPage, #pageHeight{
-    /* height: 102%; */
-}
-
 #progressBar{
     display: flex;
     justify-content: center;
@@ -140,9 +136,11 @@ body{
     font-weight: normal;
 }
 
-/* #movieRatings{
-
-} */
+#movieRatings{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15%;
+}
 
 #watchedList{
     background-color: var(--color2);
@@ -164,6 +162,10 @@ body{
     cursor: pointer;
 }
 
+#player{
+    margin: auto;
+}
+
 #whereToWatchMovie{
     padding: 2% 0%;
     display: flex;
@@ -183,6 +185,7 @@ body{
     display: flex;
     padding-top: 3%;
     padding-left: 3%;
+    padding-right: 3%;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -191,9 +194,8 @@ body{
 
 } */
 
-.row2,.row3,.row4{
-    padding-left: 3%;
-    padding-top: 1%;
+.row{
+    padding-top: 3%;
 }
 
 /* -----------------lists------------------ */
@@ -205,11 +207,37 @@ header{
     width: 100%;
 }
 
-/* .top-space{
-
-} */
 
 /* -----------------media queries------------------ */
+@media screen and (max-width: 1024px) {  /*bulma tablet*/
+
+
+
+}
+
+
+@media screen and (max-width: 768px) {  /*bulma mobile*/
+
+    #player{
+        width: 480px;
+        height: 270px;
+    }
+
+    .row{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+
+    #player{
+        width: 360px;
+        height: 203px;
+    }
+    
+}
 
 @media screen and (max-width: 480px) {
 
