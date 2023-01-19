@@ -1,8 +1,8 @@
 export { getAPIData }
 
 //This file contains code that grabs data from the IMDB API and prints it to the page
-//const IMDB_API_KEY = 'k_99xlpepl';  //Primary API Key
-const IMDB_API_KEY = 'k_sm3l0qjr';  //Backup API Key
+const IMDB_API_KEY = 'k_99xlpepl';  //Primary API Key
+//const IMDB_API_KEY = 'k_sm3l0qjr';  //Backup API Key
 
 const UTELLY_API_KEY = '6ebc9475e4mshe8509a12a672fc1p1988f4jsn8906c64e4c22'; //Primary
 //const UTELLY_API_KEY = 'b41d6055ddmshff73aeabdafca16p10f353jsn689c85b1fa30'; //Backup
