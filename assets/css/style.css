@@ -77,6 +77,10 @@ html{
     width: 100vw;
 }
 
+#subtitle p{
+    text-align: center;
+}
+
 .modal-card{
     width: 350px;
 }
@@ -86,11 +90,11 @@ html{
 }
 
 /* -------------searchResults-------------- */
-#mainPage{ /* HERE!!!!!! */
+#mainPage{
     display: none;
 }
 
-#loadingPage{ /* HERE!!!!!! */
+#loadingPage{
     display: contents;
     height: 100vh;
 }
