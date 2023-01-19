@@ -7,6 +7,8 @@ var watchedListEl = $('#watchedList');
 var unWatchedListEl = $('#unWatchedList');
 var movieTitleEl = $('#movieTitle');
 var movieRatingsEl = $('#movieRatings');
+var imDbRatingEl = $('#imdbRating');
+var metacriticRatingEl = $('#metacriticRating');
 var movieSwapInputEl = $('#movieRatings');
 
 // Reads movies from local storage and returns array of movie objects.
@@ -41,8 +43,8 @@ function readMoviesFromStorage() {
       // Create row and columns for movie
       var rowEl = $('<tr>');
       var nameEL = $('<td>').text(movie.name);
-      var ratingEl = $('<td>').text(movie.rating);
-      var swapEl = $('<td>').text(movie.swap);  
+      var rating1El = $('<td>').text(movie.rating1);
+      var rating2El = $('<td>').text(movie.rating2);  
   
       // Save the index of the movie as a data-* attribute on the button. This
       // will be used when removing the movie from the array.
@@ -53,7 +55,7 @@ function readMoviesFromStorage() {
       );
   
       // append elements to DOM to display them
-      rowEl.append(nameEL, ratingEl, swapEl, deleteEl);
+      rowEl.append(nameEL, rating1El, rating2El, deleteEl);
       watchedTableEl.append(rowEl);
     }
   }
@@ -77,13 +79,14 @@ function readMoviesFromStorage() {
     console.log("clicked")
     // read user input from the form
     var movieName = movieTitleEl.text();
-    var movieRating = movieRatingsEl.text();
-    var movieSwap = movieSwapInputEl.text()
+    var movieRating1 = movieRatingsEl.children().eq(0).text();
+    var movieRating2 = movieRatingsEl.children().eq(1).text();
+  
 
     var newMovie = {
       name: movieName,
-      rating: movieRating,
-      swap: movieSwap,
+      rating1: movieRating1,
+      rating2: movieRating2,
     };
   
     // add movie to local storage
@@ -138,8 +141,8 @@ function readMoviesFromStorage2() {
       // Create row and columns for movie
       var rowEl = $('<tr>');
       var nameEL = $('<td>').text(unwatchedMovie.name);
-      var ratingEl = $('<td>').text(unwatchedMovie.rating);
-      var swapEl = $('<td>').text(unwatchedMovie.swap);  
+      var rating1El = $('<td>').text(unwatchedMovie.rating1);
+      var rating2El = $('<td>').text(unwatchedMovie.rating2);   
   
       // Save the index of the movie as a data-* attribute on the button. This
       // will be used when removing the movie from the array.
@@ -150,7 +153,7 @@ function readMoviesFromStorage2() {
       );
   
       // append elements to DOM to display them
-      rowEl.append(nameEL, ratingEl, swapEl, deleteEl);
+      rowEl.append(nameEL, rating1El, rating2El, deleteEl);
       unWatchedTableEl.append(rowEl);
     }
   }
@@ -174,13 +177,13 @@ function readMoviesFromStorage2() {
     console.log("clicked")
     // read user input from the form
     var movieName = movieTitleEl.text();
-    var movieRating = movieRatingsEl.text();
-    var movieSwap = movieSwapInputEl.text()
+    var movieRating1 = movieRatingsEl.children().eq(0).text();
+    var movieRating2 = movieRatingsEl.children().eq(1).text();
 
     var newMovie = {
       name: movieName,
-      rating: movieRating,
-      swap: movieSwap,
+      rating1: movieRating1,
+      rating2: movieRating2,
     };
   
     // add movie to local storage
