@@ -1,18 +1,19 @@
 export { displayAPIData }
 
 // Prints the recieved API data out to the page
-async function displayAPIData(imdbData,utellyData) {
+async function displayAPIData(imdbData, utellyData) {
 
-    console.log("Print func");
-    console.log(imdbData);
-    console.log(utellyData);
-    
+    //console.log("Print func");
+    //console.log(imdbData);
+    //console.log(utellyData);
+
     $('#movieTitle').text(imdbData.title);
     $('#moviePoster').attr('src', imdbData.poster);
-    $('#description').text(imdbData.plot);
+    $('#description p').text(imdbData.plot);
     $('#imdbRating p').text(imdbData.imDbRating);
     $('#metacriticRating p').text(imdbData.metacriticRating);
-    
+
+    //---------CODE FROM YOUTUBE API GUIDE-------------
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
 
@@ -29,17 +30,22 @@ async function displayAPIData(imdbData,utellyData) {
             width: '640',
             videoId: imdbData.youtubeId,
             playerVars: {
-            'playsinline': 1
-            },                                        
+                'playsinline': 1
+            },
         });
     }
+    //---------CODE FROM YOUTUBE API GUIDE-------------
 
     setTimeout(() => {
         onYouTubeIframeAPIReady();
-    }, 450);
+    }, 550);
 
-    for(var x in utellyData.collection.locations){
-        $('#whereToWatchMovie').append("<a href=" + utellyData.collection.locations[x].url + " target='_blank'><img src=" + utellyData.collection.locations[x].icon + "></a>");
+    for (var x in utellyData.collection.locations) {
+        $('#whereToWatchMovie').append(
+            "<a href=" + utellyData.collection.locations[x].url + " target='_blank'>" +
+            "<img src=" + utellyData.collection.locations[x].icon + ">"
+            + "</a>"
+        );
     }
 
 }

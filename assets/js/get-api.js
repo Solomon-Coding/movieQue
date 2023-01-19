@@ -1,4 +1,4 @@
-export { getAPIData, readFromStorage, saveToStorage }
+export { getAPIData }
 
 //This file contains code that grabs data from the IMDB API and prints it to the page
 //const IMDB_API_KEY = 'k_99xlpepl';  //Primary API Key
@@ -11,7 +11,7 @@ const UTELLY_API_KEY = '6ebc9475e4mshe8509a12a672fc1p1988f4jsn8906c64e4c22'; //P
 const movie = {
     searchTerm: "",
     imDbID: "",
-    title: "",   
+    title: "",
     poster: "",
     plot: "",
     imDbRating: "",
@@ -24,22 +24,22 @@ function readFromStorage(key) {
     if (data) { data = JSON.parse(data) }
     else { data = [] }
     return data;
-  };
-  
+};
+
 function saveToStorage(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
 };
 
 // Accepts a URL to get data back from and returns data object
-async function checkAPI (url,options) {
-    let apiData = await fetch(url,options);
-        //.catch(error => { alert('Unable to connect to imdb') });;
+async function checkAPI(url, options) {
+    let apiData = await fetch(url, options);
+    //.catch(error => { alert('Unable to connect to imdb') });;
     let apiJson = await apiData.json();
     return apiJson;
 }
 
 // Gets data from the API and saves it to the movie object, which is passed to the print function
-async function getAPIData(mode = '',query = ''){
+async function getAPIData(mode = '', query = '') {
     let imdbBaseUrl = 'https://imdb-api.com/en/API/';
     let utellyBaseUrl = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=';
     let url = '';
@@ -47,24 +47,24 @@ async function getAPIData(mode = '',query = ''){
     let options = {};
     let API = false;
 
-    switch(mode){
+    switch (mode) {
         case 'imdb-search':
             url = imdbBaseUrl + 'SearchMovie/' + IMDB_API_KEY + '/' + query;
-            if(API){
-                APIData = await checkAPI(url,options);
-                saveToStorage('imdb-search',APIData);
+            if (API) {
+                APIData = await checkAPI(url, options);
+                saveToStorage('imdb-search', APIData);
             }
-            else{ APIData = readFromStorage('imdb-search') }
+            else { APIData = readFromStorage('imdb-search') }
             movie.imDbID = APIData.results[0].id;
-            
+
             return movie.imDbID;
         case 'imdb-title':
             url = imdbBaseUrl + 'Title/' + IMDB_API_KEY + '/' + query;
-            if(API){
-                APIData = await checkAPI(url,options);
-                saveToStorage('imdb-title',APIData);
+            if (API) {
+                APIData = await checkAPI(url, options);
+                saveToStorage('imdb-title', APIData);
             }
-            else{ APIData = readFromStorage('imdb-title') }
+            else { APIData = readFromStorage('imdb-title') }
 
             movie.title = APIData.fullTitle;
             movie.poster = APIData.image;
@@ -72,7 +72,7 @@ async function getAPIData(mode = '',query = ''){
             movie.imDbRating = APIData.imDbRating;
             movie.metacriticRating = APIData.metacriticRating;
 
-            return movie;        
+            return movie;
         case 'utelly':
             url = utellyBaseUrl + query + '&source=imdb&country=us';
             options = {
@@ -82,20 +82,20 @@ async function getAPIData(mode = '',query = ''){
                     'X-RapidAPI-Host': 'utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com'
                 }
             };
-            if(API){
-                APIData = await checkAPI(url,options);
-                saveToStorage('utelly',APIData);
+            if (API) {
+                APIData = await checkAPI(url, options);
+                saveToStorage('utelly', APIData);
             }
-            else{ APIData = readFromStorage('utelly') }
+            else { APIData = readFromStorage('utelly') }
 
             return APIData;
         case 'imdb-youtube-trailer':
             url = imdbBaseUrl + 'YouTubeTrailer/' + IMDB_API_KEY + '/' + query;
-            if(API){
-                APIData = await checkAPI(url,options);
-                saveToStorage('imdb-youtube-trailer',APIData);
+            if (API) {
+                APIData = await checkAPI(url, options);
+                saveToStorage('imdb-youtube-trailer', APIData);
             }
-            else{ APIData = readFromStorage('imdb-youtube-trailer') }
+            else { APIData = readFromStorage('imdb-youtube-trailer') }
 
             movie.youtubeId = APIData.videoId;
 

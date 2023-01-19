@@ -7,8 +7,8 @@ var watchedListEl = $('#watchedList');
 var unWatchedListEl = $('#unWatchedList');
 var movieTitleEl = $('#movieTitle');
 var movieRatingsEl = $('#movieRatings');
-var imDbRatingEl = $('#imdbRating');
-var metacriticRatingEl = $('#metacriticRating');
+var imDbRatingEl = $('#imdbRating p');
+var metacriticRatingEl = $('#metacriticRating p');
 var movieSwapInputEl = $('#movieRatings');
 
 // Reads movies from local storage and returns array of movie objects.
@@ -76,7 +76,7 @@ function readMoviesFromStorage() {
   function addMovie(event) {
     event.preventDefault();
     
-    console.log("clicked")
+    //console.log("clicked")
     // read user input from the form
     var movieName = movieTitleEl.text();
     var movieRating1 = movieRatingsEl.children().eq(0).text();
@@ -174,7 +174,7 @@ function readMoviesFromStorage2() {
   function addMovie2(event) {
     event.preventDefault();
     
-    console.log("clicked")
+    //console.log("clicked")
     // read user input from the form
     var movieName = movieTitleEl.text();
     var movieRating1 = movieRatingsEl.children().eq(0).text();

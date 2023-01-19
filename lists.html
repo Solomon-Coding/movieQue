@@ -1,89 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">   
-    <title>movieQue - Lists</title>
-  </head>
-  <body class="has-navbar-fixed-top">
-    
-    <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="index.html">
-          <img src="assets/images/movieque-logo-white.png" width="89" height="28">
-        </a>
-    
-        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>movieQue - Lists</title>
+</head>
+
+<body class="has-navbar-fixed-top">
+
+  <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="assets/images/movieque-logo-white.png" width="89" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">Home</a>
+        <a class="navbar-item" href="lists.html">Watch Lists</a>
+        <!-- <a class="navbar-item" href="searchResult.html">Search Results</a> -->
       </div>
-    
-      <div class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="index.html">Home</a>      
-          <a class="navbar-item" href="lists.html">Watch Lists</a>           
-          <a class="navbar-item" href="searchResult.html">Search Results</a>           
-        </div>          
-      </div>
-    </nav>
+    </div>
+  </nav>
 
-    <main class="fullHeight">
+  <main class="fullHeight">
 
-      <div class="columns fullHeight">
-        <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
+    <div class="columns fullHeight">
+      <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
 
-        <div class="column">
-          <section class="section">
-            <h2> Watched Movies</h2>
-            <table class="table">
-              <thead>
-                <tr >
-                  <th>Movie Name</th>
-                  <th>IMDb Rating</th>
-                  <th>Metacritic Rating</th>
-                  <th>Remove Entry</th>
-                </tr>
-              </thead>
-    
-              <tbody id="watchedTable">
+      <div class="column">
+        <section class="section">
+          <h2> Watched Movies</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Movie Name</th>
+                <th>IMDb Rating</th>
+                <th>Metacritic Rating</th>
+                <th>Remove Entry</th>
+              </tr>
+            </thead>
 
-              </tbody>
-            </table>
-          </section>
-    
-          <section class="section">
-            <h2>Movies to Watch</h2>
-            <table class="table" >
-              <thead>
-                <tr >
-                  <th>Movie Name</th>
-                  <th>IMDb Rating</th>
-                  <th>Metacritic Rating</th>
-                  <th>Remove Entry</th>
-                </tr>
-              </thead>
-    
-              <tbody id="unWatchedTable">
+            <tbody id="watchedTable">
 
-              </tbody>
-            </table>
-          </section>
-        </div>
+            </tbody>
+          </table>
+        </section>
 
-        <div class="column is-2-desktop is-1-mobile is-1-tablet rightSide"></div>
+        <section class="section">
+          <h2>Movies to Watch</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Movie Name</th>
+                <th>IMDb Rating</th>
+                <th>Metacritic Rating</th>
+                <th>Remove Entry</th>
+              </tr>
+            </thead>
+
+            <tbody id="unWatchedTable">
+
+            </tbody>
+          </table>
+        </section>
+
       </div>
 
-    </main>    
+      <div class="column is-2-desktop is-1-mobile is-1-tablet rightSide"></div>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/bulma.js"></script>
-    <script type="module" src="assets/js/main.js"></script>
-    <script src="assets/js/listsFunc.js"></script>
-      
-  </body>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/bulma.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/js/listsFunc.js"></script>
+
+</body>
+
 </html>
