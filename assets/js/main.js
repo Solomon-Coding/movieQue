@@ -4,9 +4,20 @@ import { displayAPIData } from "./print-api.js";
 // This will contain the code that grabs the user input from the search bar
 $(function() {    
 
-    $('#searchBtn').on("click",function(){        
-        movieSearchButton();
-    })    
+    $('#searchBtn').on("click",function(){
+        if($('#searchInput').val().trim() === ''){
+            //console.log("Enter something");
+            openModal(document.getElementById('modal-error'));
+            $('#searchInput').val('');
+        }else{
+            movieSearchButton();
+        }   
+        
+    })
+
+    function openModal($el) {
+        $el.classList.add('is-active');
+      }
     
     function movieSearchButton(){
         var userSearch = '';
@@ -16,7 +27,8 @@ $(function() {
         console.log("User input: "+userSearch);
 
         // Replaces the body of index.html with the body from searchResult.html
-        $('body').load('./searchResult.html');       
+        $('body').load('./searchResult.html');
+        document.title = 'movieQue - Search';     
 
         // Set up a promise to get the imdb ID in order to get other data
         let imDbSearch = new Promise(function(resolve, reject) {
@@ -41,16 +53,21 @@ $(function() {
                 // Calls the promise to get data back from imdb
                 imDbTitle.then(imdb => {
                     console.log(imdb);
-
                     // Nested promise that excecutes after data has been returned from imdb
                     utellyLookup.then(utelly => {
                         console.log(utelly)
 
                         // For use when API is turned off
                         setTimeout(() => {
+
                             // Displays data returned from imdb and utelly
                             displayAPIData(imdb,utelly);
-                        }, 5000);
+
+                            // Changes from the loading screen
+                            document.getElementById("mainPage").style.display = "contents";
+                            document.getElementById("loadingPage").style.display = "none";
+                            $('html').css('overflow-y','scroll');
+                        }, 4000);
 
                         // For use when API is turned on
                         //displayAPIData(imdb,utelly);
