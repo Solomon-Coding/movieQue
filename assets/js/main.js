@@ -66,6 +66,7 @@ $(function() {
                             // Changes from the loading screen
                             document.getElementById("mainPage").style.display = "contents";
                             document.getElementById("loadingPage").style.display = "none";
+                            $('html').css('overflow-y','scroll');
                         }, 4000);
 
                         // For use when API is turned on
