@@ -1,88 +1,99 @@
 <!DOCTYPE html>
 <html class="overflow">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>movieQue - Home</title>
-  </head>
-  <body class="has-navbar-fixed-top">
 
-    <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="index.html">
-          <img src="assets/images/movieque-logo-white.png" width="89" height="28">
-        </a>
-    
-        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      
-      <div class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="index.html">Home</a>      
-          <a class="navbar-item" href="lists.html">Watch Lists</a>           
-          <a class="navbar-item" href="searchResult.html">Search Results</a>           
-        </div>          
-      </div>
-    </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>movieQue - Home</title>
+</head>
 
-    <main id="test" class="fullHeight">
+<body class="has-navbar-fixed-top">
 
-      <div class="columns is-mobile fullHeight">
-        <div class="column is-2-desktop is-1-mobile is-1-tablet leftSide"></div>
+  <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="assets/images/movieque-logo-white.png" width="89" height="28">
+      </a>
 
-        <div class="column" id="search">  
-          <div>
-            <h1 class="title is-2">Welcome to movieQue!</h1>  
-          </div>
-          <div class="field has-addons" id="searchBar">
-            <div class="control">
-              <input class="input is-medium" id="searchInput" type="text" placeholder="Look up a Movie!">
-            </div>
-            <div class="control" id="searchBtn">
-              <a class="button is-info is-medium">Search</a>
-            </div>
-          </div> 
-          <div id="subtitle">
-            <p>To start, enter the name of a movie you wish to look up.</p>
-          </div>
-        </div>
-
-        <div class="column is-2-desktop is-1-mobile is-1-tablet rightSide"></div>
-      </div>
-
-    </main>
-
-    <footer id="indexFooter">
-      
-    </footer>
-
-    <div id="modal-error" class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title">Error</p>
-          <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-          <p>You haven't entered anything</p>
-        </section>
-        <footer class="modal-card-foot">
-          <button class="button is-success">OK</button>          
-        </footer>
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/bulma.js"></script>
-    <script type="module" src="assets/js/main.js"></script>
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">Home</a>
+        <a class="navbar-item" href="lists.html">Watch Lists</a>
+        <!-- <a class="navbar-item" href="searchResult.html">Search Results</a> -->
+      </div>
+    </div>
+  </nav>
 
-  </body>
+  <main id="test" class="fullHeight">
+
+    <div class="columns is-mobile fullHeight">
+      <div class="column is-2-desktop is-0-mobile is-2-tablet leftSide"></div>
+
+      <div class="column" id="search">
+        <div>
+          <h1 class="title is-2">Welcome to movieQue!</h1>
+        </div>
+        <div class="field has-addons" id="searchBar">
+          <div class="control">
+            <form id="searchForm">
+              <input class="input is-medium" id="searchInput" type="text" placeholder="Look up a Movie!">
+              <input type="submit" style="display:none">
+            </form>
+          </div>
+          <div class="control" id="searchBtn">
+            <a class="button is-info is-medium">Search</a>
+          </div>
+        </div>
+        <div id="subtitle">
+          <p>To start, enter the name of a movie you wish to look up.</p>
+        </div>
+      </div>
+
+      <div class="column is-2-desktop is-0-mobile is-2-tablet rightSide"></div>
+    </div>
+
+  </main>
+
+  <!-- <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>movieQue</strong> by <a href="">Jon Cherwin</a> & <a href="">Solomon Vana</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+      </div>
+    </footer>  -->
+
+  <div id="modal-error" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Error</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>You haven't entered anything</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success">OK</button>
+      </footer>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/bulma.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+
+</body>
+
 </html>

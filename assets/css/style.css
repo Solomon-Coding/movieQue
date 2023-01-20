@@ -1,37 +1,38 @@
 :root {
-    --color1:rgb(108,11,170);
-    --color2:rgb(81,8,126);
-    --color3:black;
-    --color5:white;
+    --color1: rgb(108, 11, 170);
+    --color2: rgb(81, 8, 126);
+    --color3: black;
+    --color5: white;
+    --color6: rgb(255, 255, 255, 0);
 }
 
 /* ------------------ALL------------------- */
-html{
+html {
     height: 100vh;
     background-color: var(--color3);
 }
 
-body{
+body {
     height: 100%;
     color: var(--color5);
 }
 
-.rightSide{
+.rightSide {
     background: var(--color3);
-    background: linear-gradient(90deg, var(--color3) 0%, var(--color2) 50%);
+    background: linear-gradient(90deg, var(--color6) 0%, var(--color2) 50%);
 }
 
-.leftSide{
+.leftSide {
     background: var(--color3);
-    background: linear-gradient(90deg, var(--color2) 50%, var(--color3) 100%);
+    background: linear-gradient(90deg, var(--color2) 50%, var(--color6) 100%);
 }
 
-.column{
+.column {
     padding: 0rem;
 }
 
-.fullHeight{
-    height:102%;
+.fullHeight {
+    height: 102%;
 }
 
 .overflow {
@@ -39,21 +40,21 @@ body{
 }
 
 /* -----------------index------------------ */
-#searchBar{
+#searchBar {
     justify-content: center;
     width: 360px;
     margin: 0 auto;
 }
 
-#searchInput a{
+#searchInput a {
     background-color: var(--color2);
 }
 
-#searchInput a:hover{
+#searchInput a:hover {
     background-color: var(--color1);
 }
 
-#search{
+#search {
     display: flex;
     align-content: center;
     justify-content: space-evenly;
@@ -62,55 +63,51 @@ body{
     padding-bottom: 6%;
 }
 
-#search h1{
+#search h1 {
     display: flex;
     text-align: center;
     color: var(--color5);
 }
 
-#searchBtn a{
+#searchBtn a {
     background-color: var(--color2);
 }
 
-#searchBtn a:hover{
+#searchBtn a:hover {
     background-color: var(--color1);
 }
 
-#subtitle p{
+#subtitle p {
     text-align: center;
 }
 
-#test{
+#test {
     position: fixed;
     width: 100vw;
 }
 
-#subtitle p{
+#subtitle p {
     text-align: center;
 }
 
-.modal-card{
+.modal-card {
     width: 350px;
 }
 
-.modal-card-body{
-    color: var(--color3); 
+.modal-card-body {
+    color: var(--color3);
 }
 
 /* -------------searchResults-------------- */
-#mainPage{
+#mainPage {
     display: none;
 }
 
-#loadingPage{
+#loadingPage {
     display: contents;
 }
 
-#loadingPage, #pageHeight{
-    /* height: 102%; */
-}
-
-#progressBar{
+#progressBar {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -118,86 +115,91 @@ body{
     height: 100%;
 }
 
-#progressBar progress{
+#progressBar progress {
     width: 40%;
 }
 
-/* #pageHeight{
-    
-} */
-
-#movieTitle{
+#movieTitle {
     height: fit-content;
     font-weight: bolder;
+    font-size: 150%;
 }
 
 /* #moviePoster{
 
 } */
 
-#description{
+#description p {
     padding-left: 3%;
     font-weight: normal;
 }
 
-/* #movieRatings{
-
-} */
-
-#watchedList{
-    background-color: var(--color2);
-    color: var(--color5);
+#movieRatings {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15%;
 }
 
-#watchedList:hover{
-    background-color: var(--color1);
-    cursor: pointer;
+#movieRatings div p {
+    font-size: 150%;
 }
 
-#unWatchedList{
-    background-color: var(--color2);
-    color: var(--color5);
+#listButtons h1 {
+    margin-bottom: 20px;
 }
 
-#unWatchedList:hover{
-    background-color: var(--color1);
-    cursor: pointer;
-}
-
-#whereToWatchMovie{
-    padding: 2% 0%;
+#listButtons div {
     display: flex;
     justify-content: space-evenly;
 }
 
-#whereToWatchMovie a{
+#listButtons div button {
+    background-color: var(--color2);
+    color: var(--color5);
+    border-style: none;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 4px 10px;
+}
+
+#listButtons div button:hover {
+    background-color: var(--color1);
+    cursor: pointer;
+}
+
+#player {
+    margin: auto;
+}
+
+#whereToWatchMovie {
+    padding: 2% 0%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#whereToWatchMovie a {
     display: flex;
     align-self: center;
 }
 
-.column1-1, .column1-2{
+.column1-1 {
     padding-top: 3%;
 }
 
-.column1-2{
+.column1-2 {
     display: flex;
-    padding-top: 3%;
-    padding-left: 3%;
+    padding: 5% 3%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-/* .column1{
-
-} */
-
-.row2,.row3,.row4{
-    padding-left: 3%;
-    padding-top: 1%;
+.row {
+    padding-top: 3%;
 }
 
 /* -----------------lists------------------ */
-header{
+header {
     position: fixed;
 }
 
@@ -205,20 +207,68 @@ header{
     width: 100%;
 }
 
-/* .top-space{
-
-} */
 
 /* -----------------media queries------------------ */
+@media screen and (max-width: 1024px) {
+    /*bulma tablet*/
+
+}
+
+
+@media screen and (max-width: 768px) {
+    /*bulma mobile*/
+
+    html {
+        background-image: url("../images/pexels-nathan-engel-436413.png");
+    }
+
+    #player {
+        width: 480px;
+        height: 270px;
+    }
+
+    .row {
+        padding-left: 7%;
+        padding-right: 7%;
+        margin-bottom: 30px;
+    }
+
+    .row h2 {
+        margin-bottom: 20px;
+    }
+
+    .column1-2 {
+        padding: 5% 7% 0 7%;
+    }
+
+    .column1-2 div {
+        margin-bottom: 20px;
+    }
+
+    #movieTitle {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+
+    #player {
+        width: 360px;
+        height: 203px;
+    }
+
+}
 
 @media screen and (max-width: 480px) {
 
-    #search h1, #subtitle p{
+    #search h1,
+    #subtitle p {
         max-width: 250px;
         margin: auto;
     }
 
-    #progressBar progress{
+    #progressBar progress {
         width: 80%;
     }
 
@@ -226,7 +276,7 @@ header{
 
 @media screen and (max-width: 400px) {
 
-    #progressBar p{
+    #progressBar p {
         width: 60%;
         margin: auto;
         text-align: center;
